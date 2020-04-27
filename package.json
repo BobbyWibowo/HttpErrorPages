@@ -9,7 +9,8 @@
         "docs": "node bin/generator.js static docs/config.json --out=docs",
         "dist": "node bin/generator.js static config-dist.json --out=dist; tar -cf dist/pages.tar dist/*.html",
         "static": "node bin/generator.js static",
-        "gulp": "gulp"
+        "gulp": "gulp",
+        "fiery.me": "gulp fiery.me; node bin/generator.js static -t fiery.me/assets/template.ejs -s fiery.me/assets/layout.css -p fiery.me/pages.json -o fiery.me/out fiery.me/config.json"
     },
     "keywords": [
         "http",
