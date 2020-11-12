@@ -5,7 +5,7 @@
     },
 
     "400": {
-        "title": "Bad Request",
+        "title": "Bad request",
         "message": "The server cannot process the request due to something that is perceived to be a client error."
     },
 
@@ -15,7 +15,7 @@
     },
 
     "403": {
-        "title": "Access Denied",
+        "title": "Access denied",
         "message": "The requested resource requires an authentication."
     },
 
@@ -25,13 +25,19 @@
         "footer": false
     },
 
+    "429": {
+        "title": "Too many request",
+        "message": "Please slow down and try again in a while.",
+        "footer": false
+    },
+
     "500": {
         "title": "Webservice currently unavailable",
         "message": "An unexpected condition was encountered.\nOur service team has been dispatched to bring it back online."
     },
 
     "501": {
-        "title": "Not Implemented",
+        "title": "Not implemented",
         "message": "The webserver cannot recognize the request method."
     },
 
@@ -46,7 +52,7 @@
     },
 
     "520": {
-        "title": "Origin Error - Unknown Host",
+        "title": "Origin error - unknown host",
         "message": "The requested hostname is not routed. Use only hostnames to access resources."
     },
 
