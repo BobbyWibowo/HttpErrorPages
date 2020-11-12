@@ -22,7 +22,7 @@ async function generator(configFilename, pageDefinitionFile, distPath){
 
     // load template
     const tpl = await _fs.readFile(templatePath, 'utf8');
-   
+
     // load css
     const css = await _fs.readFile(cssPath, 'utf8');
 
@@ -36,8 +36,10 @@ async function generator(configFilename, pageDefinitionFile, distPath){
         // inject errorcode
         pconf.code = p;
 
-        // inject foote
-        pconf.footer = pconf.footer || config.footer;
+        // inject footer (checks against undefined to allow falsy values)
+        pconf.footer = typeof pconf.footer !== 'undefined'
+            ? pconf.footer
+            : config.footer;
 
         // render page
         const content = await _pageRenderer(tpl, css, pconf);
@@ -86,7 +88,7 @@ _cli
 
         // page definition not set ? use lang
         if (pageDefinitionFile === null){
-            pageDefinitionFile = _path.join(_langPath, 'pages-'+ lang + '.json') 
+            pageDefinitionFile = _path.join(_langPath, 'pages-'+ lang + '.json')
         }
 
         // show paths

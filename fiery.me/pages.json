@@ -21,7 +21,8 @@
 
     "404": {
         "title": "Resource not found",
-        "message": "The requested resource could not be found."
+        "message": "The requested resource could not be found.",
+        "footer": false
     },
 
     "500": {
