@@ -21,14 +21,12 @@
 
     "404": {
         "title": "Resource not found",
-        "message": "The requested resource could not be found.",
-        "footer": false
+        "message": "The requested resource could not be found."
     },
 
     "429": {
         "title": "Too many request",
-        "message": "Please slow down and try again in a while.",
-        "footer": false
+        "message": "Please slow down and try again in a while."
     },
 
     "500": {
